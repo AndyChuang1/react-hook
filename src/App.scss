@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+  background-color: antiquewhite;
+  height: 100vh;
+  .text {
+    color: lightcoral;
+  }
+  .d-flex {
+    display: flex;
+    justify-content: center;
+  }
+}
