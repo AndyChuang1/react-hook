@@ -6,7 +6,7 @@ const Loader = props => {
   // const [changeTimes, setChangeTimes] = useState(0);
   //componentDidMount
   useEffect(() => {
-    console.log('Run onece');
+    console.log('Run onece Loader');
   }, []);
   //componentDidUpdate 像Vue中的watch props.count 此屬性
 

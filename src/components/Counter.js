@@ -4,11 +4,14 @@ import PropTypes from 'prop-types';
 const Counter = props => {
   const [changeTimes, setChangeTimes] = useState(0);
   //componentDidMount
-  useEffect(() => {
-    props.setCount(20);
-    console.log('Run onece');
-  }, []);
+  // useEffect(() => {
+  //   console.log('Run onece');
+  //   return () => {
+  //     props.setCount(0);
+  //   };
+  // }, []);
   //componentDidUpdate 像Vue中的watch props.count 此屬性
+
   useEffect(() => {
     function set() {
       setChangeTimes(changeTimes + 1);
