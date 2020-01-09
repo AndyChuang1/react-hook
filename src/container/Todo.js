@@ -14,7 +14,7 @@ const Todo = () => {
     setItemList(newTodo);
     setinputValue('');
   };
-  const deleteItem
+  const deleteItem = () => {};
   return (
     <div id='todo' className='container'>
       <h1>Todo List</h1>
