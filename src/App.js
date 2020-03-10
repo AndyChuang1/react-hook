@@ -1,11 +1,22 @@
 import React from 'react';
 import './App.scss';
-import Counter from './components/counter';
+import Cards from './components/Card';
 function App() {
+  const cardData = [
+    { header: 'KFC', title: 'Chicken leg', text: 'Delicous' },
+    { header: 'Macdonald', title: 'Franch fries', text: 'Delicous' },
+  ];
   return (
     <div className='App'>
       <header className='App-header'>
-        <Counter></Counter>
+        <div className='cotainer'>
+          <div className='row'>
+            {cardData.map(item => {
+              const { header, title, text } = item;
+              return <Cards header={header} title={title} text={text}></Cards>;
+            })}
+          </div>
+        </div>
       </header>
     </div>
   );
