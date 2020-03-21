@@ -1,7 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Counter() {
   let [count, setCount] = useState(0);
+  useEffect(() => {
+    // Happens after every render
+    console.log(123);
+
+    return () => {
+      // Optional; clean up before next render
+    };
+  });
   return (
     <div className='counter'>
       <p>Render condition</p>
