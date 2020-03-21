@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 function Counter() {
   let [count, setCount] = useState(0);
+  let [toggle, setToggle] = useState(false);
+
   useEffect(() => {
     // Happens after every render
     console.log(123);
@@ -13,6 +15,16 @@ function Counter() {
   return (
     <div className='counter'>
       <p>Render condition</p>
+      <button
+        onClick={() => {
+          setToggle(!toggle);
+        }}
+      >
+        Click
+      </button>
+      <h4 className='title' style={{ visibility: toggle ? 'visible' : 'hidden' }}>
+        Show
+      </h4>
       {count >= 10 ? null : (
         <button
           className='btn increase'

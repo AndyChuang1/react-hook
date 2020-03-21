@@ -8,8 +8,8 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <Counter></Counter>
-        <CounterS></CounterS>
-        <CounterR></CounterR>
+        {/* <CounterS></CounterS> */}
+        {/* <CounterR></CounterR> */}
       </header>
     </div>
   );
