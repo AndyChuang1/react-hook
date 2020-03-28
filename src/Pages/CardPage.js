@@ -12,7 +12,7 @@ function CardPage() {
       <div className='row'>
         {cardData.map(item => {
           const { header, title, text } = item;
-          return <Cards header={header} title={title} text={text}></Cards>;
+          return <Cards key={header} header={header} title={title} text={text}></Cards>;
         })}
       </div>
     </div>

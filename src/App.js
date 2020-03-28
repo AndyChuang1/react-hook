@@ -6,26 +6,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import CardPage from './Pages/CardPage';
 import CounterPage from './Pages/CounterPage';
 import HomePage from './Pages/HomePage';
+import { Navbar, Nav } from 'react-bootstrap';
 
 function App() {
   return (
     <Router>
       <div className='App'>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to='/'>Home</Link>
-              </li>
-              <li>
-                <Link to='/counter'>Counter</Link>
-              </li>
-              <li>
-                <Link to='/card'>Card</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <Navbar bg='dark' variant='dark'>
+          <Navbar.Brand href='/'>尻Code</Navbar.Brand>
+          <Nav className='mr-auto'>
+            <Nav.Link as={Link} to='/' eventKey='/'>
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to='/counter' eventKey='/counter'>
+              Counter
+            </Nav.Link>
+            <Nav.Link as={Link} to='/card' eventKey='/card'>
+              Card
+            </Nav.Link>
+          </Nav>
+        </Navbar>
         <Switch>
           <Route exact path='/'>
             <HomePage></HomePage>
